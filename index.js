@@ -23,15 +23,10 @@ function moveDodgerLeft() {
     }
   }
 
-  const box = document.getElementById("game");
-
   function moveDodgerRight() {
-    const rightNumbers = dodger.style.left.replace("px", "");
-    const left = parseInt(rightNumbers, 10);
-    const boxWidth = box.offsetWidth;
-    const dodgerWidth = dodger.offsetWidth;
-    const maxRight = boxWidth - dodgerWidth;
-
+    const newPosition = dodger.style.left.replace("px", "");
+    const left = parseInt(newPosition, 10);
+    const maxRight = 360;
     if (left <= maxRight) {
         dodger.style.left = `${left + 1}px`;
     }
